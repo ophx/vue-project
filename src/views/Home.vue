@@ -6,7 +6,7 @@
           <transition name="slide" mode="out-in">
             <div :key="step">
               <div v-if="step === 1" class="space-y-4 text-center w-80">
-                <img src="https://cdn3.emoji.gg/emojis/4327-businesspepe.png" class="h-24 w-24 rounded-full shadow-lg mx-auto">
+                <img src="https://cdn3.emoji.gg/emojis/4327-businesspepe.png" class="h-24 w-24 rounded-full shadow-lg mx-auto animate-bounce">
                 <p class="text-white text-xl font-medium">Welcome to OphxLinks</p>
                 <p class="text-gray-400">Lorem, ipsum dolor sit amet consectetur</p>
                 <div class="relative" @click="toggleLanguageDropdown">
@@ -39,18 +39,21 @@
                   Get Started
                 </button>
               </div>
+
               <div v-if="step === 2" class="space-y-4 text-center w-80">
                 <p class="text-white text-xl font-medium">Welcome to OphxLinks 2</p>
                 <button @click.prevent="nextStep" class="flex w-full justify-center transition-all duration-200 active:translate-y-1 px-4 py-2 rounded-lg shadow-lg bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">
                   Next
                 </button>
               </div>
+
               <div v-if="step === 3" class="space-y-4 text-center w-80">
                 <p class="text-white text-xl font-medium">Welcome to OphxLinks 3</p>
                 <button type="submit" class="flex w-full justify-center transition-all duration-200 active:translate-y-1 px-4 py-2 rounded-lg shadow-lg bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">
                     Finish
                 </button>
               </div>
+              
               <div class="flex items-center justify-between mt-4">
                 <div>
                     <div v-if="step > 1">
@@ -78,15 +81,16 @@
         data() {
             return {
                 step: 1,
-                formData: {},
+                formData: {
+                    language: "",
+                },
             };
         },
         setup() {
             const isOpen = ref(false);
-            const selectedLanguage = ref("Select a language");
+            const selectedLanguage = ref("English");
             const languages = [
                 { id: 1, name: "English" },
-                { id: 2, name: "Russian" },
             ];
             const toggleLanguageDropdown = () => {
                 isOpen.value = !isOpen.value;
@@ -111,7 +115,9 @@
                 this.step--;
             },
             submitForm() {
-                this.formData = {};
+                this.formData = {
+                    language: "",
+                };
                 this.step = 1;
             },
         },
