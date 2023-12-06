@@ -82,7 +82,6 @@
             return {
                 step: 1,
                 formData: {
-                    language: "",
                 },
             };
         },
@@ -116,7 +115,6 @@
             },
             submitForm() {
                 this.formData = {
-                    language: "",
                 };
                 this.step = 1;
             },
