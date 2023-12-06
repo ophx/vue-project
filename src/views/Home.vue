@@ -7,7 +7,7 @@
             <div :key="step">
               <div v-if="step === 1" class="space-y-4 text-center w-80">
                 <img src="https://cdn3.emoji.gg/emojis/4327-businesspepe.png" class="h-24 w-24 rounded-full shadow-lg mx-auto">
-                <p class="text-white text-xl font-bold">Welcome to OphxLinks</p>
+                <p class="text-white text-xl font-medium">Welcome to OphxLinks</p>
                 <p class="text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                 <button class="flex w-full transition-all duration-200 px-4 py-2 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-900">
                   <div class="flex items-center justify-between w-full">
@@ -27,13 +27,13 @@
                 </button>
               </div>
               <div v-if="step === 2" class="space-y-4 text-center w-80">
-                <p class="text-white text-xl font-bold">Welcome to OphxLinks 2</p>
+                <p class="text-white text-xl font-medium">Welcome to OphxLinks 2</p>
                 <button @click.prevent="nextStep" class="flex w-full justify-center transition-all duration-200 active:translate-y-1 px-4 py-2 rounded-lg shadow-lg bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">
                   Next
                 </button>
               </div>
               <div v-if="step === 3" class="space-y-4 text-center w-80">
-                <p class="text-white text-xl font-bold">Welcome to OphxLinks 3</p>
+                <p class="text-white text-xl font-medium">Welcome to OphxLinks 3</p>
                 <button type="submit" class="flex w-full justify-center transition-all duration-200 active:translate-y-1 px-4 py-2 rounded-lg shadow-lg bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">
                   Finish
                 </button>
