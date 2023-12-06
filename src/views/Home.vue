@@ -6,7 +6,7 @@
           <transition name="slide" mode="out-in">
             <div :key="step">
               <div v-if="step === 1" class="space-y-4 text-center w-80">
-                <img src="https://cdn3.emoji.gg/emojis/4327-businesspepe.png" class="h-24 w-24 rounded-full shadow-lg mx-auto animate-bounce">
+                <img src="https://cdn3.emoji.gg/emojis/5443-peepobusinesstux.png" class="h-24 w-24 shadow-lg mx-auto">
                 <p class="text-white text-xl font-medium">Welcome to OphxLinks</p>
                 <p class="text-gray-400">Lorem, ipsum dolor sit amet consectetur</p>
                 <div class="relative" @click="toggleLanguageDropdown">
@@ -41,7 +41,14 @@
               </div>
 
               <div v-if="step === 2" class="space-y-4 text-center w-80">
-                <p class="text-white text-xl font-medium">Welcome to OphxLinks 2</p>
+                <p class="text-white text-xl font-medium">First things first...</p>
+                <p class="text-gray-400">We need a username for you. Type it below!</p>
+                <div class="text-left">
+                    <label for="username" class="text-gray-400 text-sm font-medium">
+                        Username
+                    </label>
+                    <input type="text" id="username" autocomplete="off" class="flex w-full transition-all duration-200 px-4 py-2 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-900 outline-none border-none placeholder-gray-400 text-white">
+                </div>
                 <button @click.prevent="nextStep" class="flex w-full justify-center transition-all duration-200 active:translate-y-1 px-4 py-2 rounded-lg shadow-lg bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">
                   Next
                 </button>
