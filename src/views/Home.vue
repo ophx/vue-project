@@ -10,7 +10,7 @@
                 <p class="text-white text-xl font-medium">Welcome to OphxLinks</p>
                 <p class="text-gray-400">Lorem, ipsum dolor sit amet consectetur</p>
                 <div class="relative" @click="toggleLanguageDropdown">
-                    <button class="flex w-full transition-all duration-200 px-4 py-2 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-900">
+                    <button type="button" class="flex w-full transition-all duration-200 px-4 py-2 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-900">
                         <div class="flex items-center justify-between w-full">
                             <div class="flex flex-col text-left">
                                 <p class="text-gray-400 text-sm">What language do you speak?</p>
@@ -47,7 +47,7 @@
                     <label for="username" class="text-gray-400 text-sm font-medium">
                         Username
                     </label>
-                    <input type="text" id="username" autocomplete="off" class="flex w-full transition-all duration-200 px-4 py-2 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-900 outline-none border-none placeholder-gray-400 text-white">
+                    <input type="text" id="username" autocomplete="off" v-model="formData.username" class="flex w-full transition-all duration-200 px-4 py-2 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-900 outline-none border-none placeholder-gray-400 text-white">
                 </div>
                 <button @click.prevent="nextStep" class="flex w-full justify-center transition-all duration-200 active:translate-y-1 px-4 py-2 rounded-lg shadow-lg bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">
                   Next
@@ -89,6 +89,7 @@
             return {
                 step: 1,
                 formData: {
+                    username: "",
                 },
             };
         },
@@ -121,9 +122,7 @@
                 this.step--;
             },
             submitForm() {
-                this.formData = {
-                };
-                this.step = 1;
+                console.log("Username:", this.formData.username);
             },
         },
     };
