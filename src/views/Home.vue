@@ -133,7 +133,6 @@
     .popup-leave-active {
         transition: opacity 0.2s ease-in-out;
     }
-
     .popup-enter-from,
     .popup-leave-to {
         opacity: 0;
