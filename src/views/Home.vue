@@ -108,6 +108,7 @@
             const languages = [
                 { id: "en", name: "English" },
                 { id: "ru", name: "Русский" },
+                { id: "pl", name: "Polski" },
             ];
             const toggleLanguageDropdown = () => {
                 isOpen.value = !isOpen.value;
