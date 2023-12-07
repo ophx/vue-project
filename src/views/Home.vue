@@ -86,6 +86,7 @@
 
 <script>
     import { ref } from "vue";
+    import i18n from "../locales/i18n";
 
     export default {
         data() {
@@ -101,14 +102,15 @@
             const isOpen = ref(false);
             const selectedLanguage = ref("English");
             const languages = [
-                { id: 1, name: "English" },
-                { id: 2, name: "Русский" },
+                { id: "en", name: "English" },
+                { id: "ru", name: "Русский" },
             ];
             const toggleLanguageDropdown = () => {
                 isOpen.value = !isOpen.value;
             };
             const selectLanguage = (language) => {
                 selectedLanguage.value = language.name;
+                i18n.global.locale = language.id;
                 isOpen.value = false;
             };
             return {
