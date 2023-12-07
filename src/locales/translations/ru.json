@@ -1,6 +1,8 @@
 {
-    "welcome": "Добро пожаловать в OphxLinks",
-    "descrption": "Lorem, ipsum dolor sit amet consectetur",
+    "notFoundMessage": "Вот это неожиданность!",
+    "notFoundDescription": "Страница, которую вы искали, не найдена...",
+    "welcomeMessage": "Добро пожаловать в OphxLinks",
+    "welcomeDescrption": "Lorem, ipsum dolor sit amet consectetur",
     "whatDoYouSpeak": "На каком языке вы говорите?",
     "getStarted": "Начать",
     "firstThings": "Первым делом...",

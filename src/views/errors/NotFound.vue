@@ -4,8 +4,8 @@
       <div class="m-auto">
         <div class="space-y-4 text-center w-80">
             <img src="https://cdn3.emoji.gg/emojis/6426-error.png" class="h-24 w-24 shadow-lg mx-auto">
-            <p class="text-white text-xl font-medium">Well that's unexpected!</p>
-            <p class="text-gray-400">The page you were looking for was not found...</p>
+            <p class="text-white text-xl font-medium">{{ $t("notFoundMessage") }}</p>
+            <p class="text-gray-400">{{ $t("notFoundDescription") }}</p>
         </div>
       </div>
     </div>

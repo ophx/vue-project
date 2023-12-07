@@ -7,8 +7,8 @@
             <div :key="step">
               <div v-if="step === 1" class="space-y-4 text-center w-80">
                 <img src="https://cdn3.emoji.gg/emojis/5443-peepobusinesstux.png" class="h-24 w-24 shadow-lg mx-auto">
-                <p class="text-white text-xl font-medium">{{ $t("welcome") }}</p>
-                <p class="text-gray-400">{{ $t("descrption") }}</p>
+                <p class="text-white text-xl font-medium">{{ $t("welcomeMessage") }}</p>
+                <p class="text-gray-400">{{ $t("welcomeDescrption") }}</p>
                 <div class="relative" @click="toggleLanguageDropdown">
                     <button type="button" class="flex w-full transition-all duration-200 px-4 py-2 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-900">
                         <div class="flex items-center justify-between w-full">

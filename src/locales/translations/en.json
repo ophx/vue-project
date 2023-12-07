@@ -1,6 +1,8 @@
 {
-    "welcome": "Welcome to OphxLinks",
-    "descrption": "Lorem, ipsum dolor sit amet consectetur",
+    "notFoundMessage": "Well that's unexpected!",
+    "notFoundDescription": "The page you were looking for was not found...",
+    "welcomeMessage": "Welcome to OphxLinks",
+    "welcomeDescrption": "Lorem, ipsum dolor sit amet consectetur",
     "whatDoYouSpeak": "What language do you speak?",
     "getStarted": "Get Started",
     "firstThings": "First things first...",
