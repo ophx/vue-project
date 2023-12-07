@@ -88,6 +88,10 @@
     import { ref } from "vue";
     import i18n from "../locales/i18n";
 
+    if (localStorage.getItem("onboarding") == "done") {
+        window.history.pushState(null, null, "/dashboard");
+    }
+
     export default {
         data() {
             return {
@@ -137,6 +141,7 @@
                     return;
                 }
                 console.log("Username:", this.formData.username);
+                localStorage.setItem("onboarding", "done");
             },
         },
     };
