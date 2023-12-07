@@ -1,0 +1,13 @@
+{
+    "welcome": "Добро пожаловать в OphxLinks",
+    "descrption": "Lorem, ipsum dolor sit amet consectetur",
+    "whatDoYouSpeak": "На каком языке вы говорите?",
+    "getStarted": "Начать",
+    "firstThings": "Первым делом...",
+    "whatWeNeed": "Нам нужно ваше имя пользователя. Введите его ниже!",
+    "unameLabel": "Имя пользователя",
+    "unameErr": "Имя пользователя обязательно!",
+    "next": "Следующий",
+    "finish": "Отделка",
+    "previous": "Предыдущий"
+}

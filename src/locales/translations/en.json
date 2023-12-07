@@ -1,0 +1,13 @@
+{
+    "welcome": "Welcome to OphxLinks",
+    "descrption": "Lorem, ipsum dolor sit amet consectetur",
+    "whatDoYouSpeak": "What language do you speak?",
+    "getStarted": "Get Started",
+    "firstThings": "First things first...",
+    "whatWeNeed": "We need a username for you. Type it below!",
+    "unameLabel": "Username",
+    "unameErr": "A username is required!",
+    "next": "Next",
+    "finish": "Finish",
+    "previous": "Previous"
+}

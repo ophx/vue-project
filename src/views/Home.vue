@@ -7,13 +7,13 @@
             <div :key="step">
               <div v-if="step === 1" class="space-y-4 text-center w-80">
                 <img src="https://cdn3.emoji.gg/emojis/5443-peepobusinesstux.png" class="h-24 w-24 shadow-lg mx-auto">
-                <p class="text-white text-xl font-medium">Welcome to OphxLinks</p>
-                <p class="text-gray-400">Lorem, ipsum dolor sit amet consectetur</p>
+                <p class="text-white text-xl font-medium">{{ $t("welcome") }}</p>
+                <p class="text-gray-400">{{ $t("descrption") }}</p>
                 <div class="relative" @click="toggleLanguageDropdown">
                     <button type="button" class="flex w-full transition-all duration-200 px-4 py-2 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-900">
                         <div class="flex items-center justify-between w-full">
                             <div class="flex flex-col text-left">
-                                <p class="text-gray-400 text-sm">What language do you speak?</p>
+                                <p class="text-gray-400 text-sm">{{ $t("whatDoYouSpeak") }}</p>
                                 <p class="text-white font-medium">{{ selectedLanguage }}</p>
                             </div>
                             <div>
@@ -36,28 +36,31 @@
                     </div>
                 </transition>
                 <button @click.prevent="nextStep" class="flex w-full justify-center transition-all duration-200 active:translate-y-1 px-4 py-2 rounded-lg shadow-lg bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">
-                  Get Started
+                    {{ $t("getStarted") }}
                 </button>
               </div>
 
               <div v-if="step === 2" class="space-y-4 text-center w-80">
-                <p class="text-white text-xl font-medium">First things first...</p>
-                <p class="text-gray-400">We need a username for you. Type it below!</p>
+                <p class="text-white text-xl font-medium">{{ $t("firstThings") }}</p>
+                <p class="text-gray-400">{{ $t("whatWeNeed") }}</p>
                 <div class="text-left">
                     <label for="username" class="text-gray-400 text-sm font-medium">
-                        Username
+                        {{ $t("unameLabel") }}
                     </label>
                     <input type="text" id="username" autocomplete="off" v-model="formData.username" class="flex w-full transition-all duration-200 px-4 py-2 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-900 outline-none border-none placeholder-gray-400 text-white">
+                    <div v-if="usernameErr">
+                        <p class="text-red-600 text-sm">{{ $t("unameErr") }}</p>
+                    </div>
                 </div>
                 <button @click.prevent="nextStep" class="flex w-full justify-center transition-all duration-200 active:translate-y-1 px-4 py-2 rounded-lg shadow-lg bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">
-                  Next
+                    {{ $t("next") }}
                 </button>
               </div>
 
               <div v-if="step === 3" class="space-y-4 text-center w-80">
-                <p class="text-white text-xl font-medium">Welcome to OphxLinks 3</p>
+                <p class="text-white text-xl font-medium">{{ $t("welcome") }} 3</p>
                 <button type="submit" class="flex w-full justify-center transition-all duration-200 active:translate-y-1 px-4 py-2 rounded-lg shadow-lg bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">
-                    Finish
+                    {{ $t("finish") }}
                 </button>
               </div>
               
@@ -65,7 +68,7 @@
                 <div>
                     <div v-if="step > 1">
                         <button @click.prevent="prevStep" class="flex w-full justify-center transition-all duration-200 active:translate-y-1 px-4 py-2 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-900 text-white font-medium text-sm">
-                            Previous
+                            {{ $t("previous") }}
                         </button>
                     </div>
                 </div>
@@ -88,6 +91,7 @@
         data() {
             return {
                 step: 1,
+                usernameErr: false,
                 formData: {
                     username: "",
                 },
@@ -98,6 +102,7 @@
             const selectedLanguage = ref("English");
             const languages = [
                 { id: 1, name: "English" },
+                { id: 2, name: "Русский" },
             ];
             const toggleLanguageDropdown = () => {
                 isOpen.value = !isOpen.value;
@@ -122,6 +127,12 @@
                 this.step--;
             },
             submitForm() {
+                const username = this.formData.username;
+                if (!username) {
+                    this.usernameErr = true;
+                    this.step--;
+                    return;
+                }
                 console.log("Username:", this.formData.username);
             },
         },
