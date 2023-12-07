@@ -3,7 +3,7 @@ import en from "../locales/translations/en.json";
 import ru from "../locales/translations/ru.json";
 
 const i18n = createI18n({
-    locale: "en",
+    locale: (localStorage.getItem("i18n") || "en"),
     messages: {
         en: en,
         ru: ru,

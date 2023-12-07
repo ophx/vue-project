@@ -111,6 +111,7 @@
             const selectLanguage = (language) => {
                 selectedLanguage.value = language.name;
                 i18n.global.locale = language.id;
+                localStorage.setItem("i18n", language.id);
                 isOpen.value = false;
             };
             return {
@@ -154,10 +155,11 @@
 
     .popup-enter-active,
     .popup-leave-active {
-        transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
     }
     .popup-enter-from,
     .popup-leave-to {
         opacity: 0;
+        transform: translateY(-10px);
     }
 </style>
