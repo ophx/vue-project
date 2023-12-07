@@ -58,7 +58,7 @@
               </div>
 
               <div v-if="step === 3" class="space-y-4 text-center w-80">
-                <p class="text-white text-xl font-medium">{{ $t("welcome") }} 3</p>
+                <p class="text-white text-xl font-medium">{{ $t("welcomeMessage") }} 3</p>
                 <button type="submit" class="flex w-full justify-center transition-all duration-200 active:translate-y-1 px-4 py-2 rounded-lg shadow-lg bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">
                     {{ $t("finish") }}
                 </button>
