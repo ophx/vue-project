@@ -1,0 +1,15 @@
+{
+    "notFoundMessage": "Eso fue inesperado!",
+    "notFoundDescription": "Página no encontrada...",
+    "welcomeMessage": "Bienvenida a OphxLinks",
+    "welcomeDescrption": "Lorem, ipsum dolor sit amet consectetur",
+    "whatDoYouSpeak": "Qué idioma hablas?",
+    "getStarted": "Empecemos!",
+    "firstThings": "Primero...",
+    "whatWeNeed": "Vosotros necesitas un nombre. Ingréselo abajo!",
+    "unameLabel": "nombre de usuario",
+    "unameErr": "Se requiere el nombre!",
+    "next": "Próximo",
+    "finish": "Finalizar",
+    "previous": "Anterior"
+}

@@ -109,6 +109,9 @@
                 { id: "en", name: "English" },
                 { id: "ru", name: "Русский" },
                 { id: "pl", name: "Polski" },
+                { id: "es", name: "Español" },
+                { id: "ro", name: "Română" },
+                { id: "ge", name: "Deutsch" },
             ];
             const toggleLanguageDropdown = () => {
                 isOpen.value = !isOpen.value;

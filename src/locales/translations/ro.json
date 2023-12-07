@@ -1,0 +1,15 @@
+{
+    "notFoundMessage": "Ei bine, nu ne-am așteptat la asta!",
+    "notFoundDescription": "Pagina care cautai nu a fost gasită...",
+    "welcomeMessage": "Bun venit la OphxLinks",
+    "welcomeDescrption": "Lorem, ipsum dolor sit amet consectetur",
+    "whatDoYouSpeak": "Ce limbă vorbești?",
+    "getStarted": "Începe",
+    "firstThings": "Să începem cu începutul...",
+    "whatWeNeed": "Ne trebuie un nume pentru tine. Scrie-l mai jos!",
+    "unameLabel": "Nume",
+    "unameErr": "Un nume este necesar!",
+    "next": "Înainte",
+    "finish": "Finalizează",
+    "previous": "Înapoi"
+}
