@@ -1,8 +1,8 @@
 <template>
-    <div class="flex p-4">
+    <div class="flex">
         <Sidebar />
 
-        <div class="ml-80 block w-full space-y-4">
+        <div class="block w-full space-y-4 p-4">
             <UserHeader />
 
             <div class="grid grid-cols-3 gap-4">

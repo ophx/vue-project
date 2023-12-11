@@ -150,25 +150,3 @@
         },
     };
 </script>
-
-<style>
-    .slide-enter-active,
-    .slide-leave-active {
-        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    }
-    .slide-enter-from,
-    .slide-leave-to {
-        opacity: 0;
-        transform: translateX(-10px);
-    }
-
-    .popup-enter-active,
-    .popup-leave-active {
-        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-    }
-    .popup-enter-from,
-    .popup-leave-to {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-</style>

@@ -53,15 +53,3 @@
         }
     }
 </script>
-
-<style>
-    .popup-enter-active,
-    .popup-leave-active {
-        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-    }
-    .popup-enter-from,
-    .popup-leave-to {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-</style>
