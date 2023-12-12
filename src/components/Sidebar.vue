@@ -1,7 +1,7 @@
 <template>
-    <transition name="slide" mode="out-in">
-        <div v-if="isOpen" class="z-[1000] w-96 h-screen">
-            <div class="h-full p-4 overflow-y-auto bg-gray-900 shadow-lg rounded-r-lg">
+    <div class="hidden md:block z-[1000] w-96 h-screen">
+        <div class="h-full p-4 overflow-y-auto bg-gray-900 shadow-lg rounded-r-lg flex flex-col justify-between">
+            <div>
                 <ul class="space-y-2">
                     <li>
                         <router-link to="/" class="flex w-full items-center px-4 py-2">
@@ -27,23 +27,7 @@
                     </li>
                 </ul>
             </div>
+            <div></div>
         </div>
-    </transition>
+    </div>
 </template>
-
-<script>
-    import { ref } from "vue";
-
-    export default {
-        setup() {
-            const isOpen = ref(true);
-            const toggleSidebar = () => {
-                isOpen.value = !isOpen.value;
-            };
-            return {
-                isOpen,
-                toggleSidebar,
-            };
-        }
-    }
-</script>

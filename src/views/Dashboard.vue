@@ -5,7 +5,7 @@
         <div class="block w-full space-y-4 p-4">
             <UserHeader />
 
-            <div class="grid grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="bg-gray-900 rounded-lg shadow-lg p-4 border-l-4 border-blue-600">
                     <div class="flex items-center justify-between">
                         <div>

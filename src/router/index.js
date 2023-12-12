@@ -1,12 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
-import Dashboard from "../views/Dashboard.vue";
-import NotFound from "../views/errors/NotFound.vue";
 
 const routes = [
-    { path: "/", component: Home },
-    { path: "/dashboard", component: Dashboard },
-    { path: "/:pathMatch(.*)", component: NotFound },
+    { path: "/", component: () => import("../views/Home.vue") },
+    { path: "/dashboard", component: () => import("../views/Dashboard.vue") },
+    { path: "/:pathMatch(.*)", component: () => import("../views/errors/NotFound.vue") },
 ];
 
 const router = createRouter({
